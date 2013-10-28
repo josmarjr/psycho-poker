@@ -1,4 +1,4 @@
-package br.com.josmarjr.model;
+package br.com.psychopoker.model;
 
 import java.util.ArrayList;
 import java.util.List;

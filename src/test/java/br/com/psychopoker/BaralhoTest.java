@@ -1,10 +1,10 @@
-package br.com.josmarjr;
+package br.com.psychopoker;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.josmarjr.model.Baralho;
-import br.com.josmarjr.model.Carta;
+import br.com.psychopoker.model.Baralho;
+import br.com.psychopoker.model.Carta;
 import junit.framework.TestCase;
 
 public class BaralhoTest extends TestCase{
