@@ -57,6 +57,19 @@ public class Baralho {
 	}
 	
 	/**
+	 * Método que verifica se há uma Trinca entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasTrinca(){
+		for (Integer quantidade : getMapValores().values()){
+			if (quantidade == 3)
+				return true;
+		}
+		return false;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
