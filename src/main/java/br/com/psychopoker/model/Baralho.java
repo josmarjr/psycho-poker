@@ -39,6 +39,24 @@ public class Baralho {
 	}
 	
 	/**
+	 * Método que verifica se há Duas Duplas entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasDuasDuplas(){
+		int stack = 0;
+		for (Integer quantidade : getMapValores().values()){
+			if (quantidade == 2){
+				if(stack != 0)
+					return true;
+				else
+					stack++;
+			}
+		}
+		return false;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
