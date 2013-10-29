@@ -126,6 +126,17 @@ public class Baralho {
 	}
 	
 	/**
+	 * Método que verifica se há um Full House entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasFullHouse(){
+		if (hasDupla() && hasTrinca())
+			return true;
+		return false;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
