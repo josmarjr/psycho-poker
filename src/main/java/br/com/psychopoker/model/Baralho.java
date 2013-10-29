@@ -92,6 +92,20 @@ public class Baralho {
 	}
 	
 	/**
+	 * Retorna a diferença de index entre as cartas.
+	 * 
+	 * @param cartaInicial
+	 * @param cartaFinal
+	 * @return
+	 */
+	private int diffCards(Carta cartaInicial, Carta cartaFinal) {
+		int diff = this.valorCartas.indexOf(cartaFinal.getValor())
+				- this.valorCartas.indexOf(cartaInicial.getValor());
+
+		return diff;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
