@@ -75,22 +75,20 @@ public class Baralho {
 	 * @return
 	 */
 	public boolean hasStraight() {
-		
-		Carta carta = this.cartas.getFirst();
-		List<ValorCarta> subValores = this.valorCartas.subList(this.valorCartas.indexOf(carta.getValor()), this.valorCartas.size()-1);
-		Iterator<Carta> itCartas = this.cartas.iterator();
-		Iterator<ValorCarta> itValores = subValores.iterator();
-		while(itCartas.hasNext()){
-			Carta cartaAtual = itCartas.next();
-			ValorCarta valorAtual = itValores.next();
-			if(!cartaAtual.sameValue(valorAtual)){
-				if(cartaAtual.getValor().equals(ValorCarta.DEZ) && valorAtual.equals(ValorCarta.DOIS))
-					return true;
-				else
-					return false;
-			}
+		// Verifica se há repetição de cartas
+		for (Integer quantidade : getMapValores().values()) {
+			if (quantidade != 1)
+				return false;
 		}
-		return true;
+		// Verifica a diferença de index entre a última e a primeira carta
+		if (diffCards(this.cartas.getFirst(), this.cartas.getLast()) == 4) {
+			return true;
+			// Verifica a exceção da sequência do DEZ ao AS
+		} else if (diffCards(this.cartas.getFirst(), this.cartas.get(1)) == 9
+				&& this.cartas.getFirst().getValor().equals(ValorCarta.AS)) {
+			return true;
+		}
+		return false;
 	}
 	
 	/**
