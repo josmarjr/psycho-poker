@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import br.com.psychopoker.model.Carta.Naipe;
 import br.com.psychopoker.model.Carta.ValorCarta;
 
 
@@ -103,6 +104,25 @@ public class Baralho {
 				- this.valorCartas.indexOf(cartaInicial.getValor());
 
 		return diff;
+	}
+	
+	/**
+	 * Método que verifica se há um Flush entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasFlush(){
+		for(Naipe naipe : Naipe.values()){
+			if(this.cartas.getFirst().getNaipe().equals(naipe)){
+				Iterator<Carta> itCartas = this.cartas.iterator();
+				while(itCartas.hasNext()){
+					if(!itCartas.next().getNaipe().equals(naipe))
+						return false;
+				}
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
