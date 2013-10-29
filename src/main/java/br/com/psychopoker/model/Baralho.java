@@ -70,6 +70,30 @@ public class Baralho {
 	}
 	
 	/**
+	 * Método que verifica se há um Straight entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasStraight() {
+		
+		Carta carta = this.cartas.getFirst();
+		List<ValorCarta> subValores = this.valorCartas.subList(this.valorCartas.indexOf(carta.getValor()), this.valorCartas.size()-1);
+		Iterator<Carta> itCartas = this.cartas.iterator();
+		Iterator<ValorCarta> itValores = subValores.iterator();
+		while(itCartas.hasNext()){
+			Carta cartaAtual = itCartas.next();
+			ValorCarta valorAtual = itValores.next();
+			if(!cartaAtual.sameValue(valorAtual)){
+				if(cartaAtual.getValor().equals(ValorCarta.DEZ) && valorAtual.equals(ValorCarta.DOIS))
+					return true;
+				else
+					return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
