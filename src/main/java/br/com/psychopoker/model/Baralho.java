@@ -137,6 +137,19 @@ public class Baralho {
 	}
 	
 	/**
+	 * Método que verifica se há uma Quadra entre as 5 cartas.
+	 * 
+	 * @return
+	 */
+	public boolean hasQuadra(){
+		for (Integer quantidade : getMapValores().values()){
+			if (quantidade == 4)
+				return true;
+		}
+		return false;
+	}
+	
+	/**
 	 * Método que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
