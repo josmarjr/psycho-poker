@@ -25,7 +25,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há uma Dupla entre as 5 cartas.
+	 * Metodo que verifica se ha uma Dupla entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há Duas Duplas entre as 5 cartas.
+	 * Metodo que verifica se ha Duas Duplas entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há uma Trinca entre as 5 cartas.
+	 * Metodo que verifica se ha uma Trinca entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -71,20 +71,20 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há um Straight entre as 5 cartas.
+	 * Metodo que verifica se ha um Straight entre as 5 cartas.
 	 * 
 	 * @return
 	 */
 	public boolean hasStraight() {
-		// Verifica se há repetição de cartas
+		// Verifica se ha repeticao de cartas
 		for (Integer quantidade : getMapValores().values()) {
 			if (quantidade != 1)
 				return false;
 		}
-		// Verifica a diferença de index entre a última e a primeira carta
+		// Verifica a diferenca de index entre a ultima e a primeira carta
 		if (diffCards(this.cartas.getFirst(), this.cartas.getLast()) == 4) {
 			return true;
-			// Verifica a exceção da sequência do DEZ ao AS
+			// Verifica a excecao da sequencia do DEZ ao AS
 		} else if (diffCards(this.cartas.getFirst(), this.cartas.get(1)) == 9
 				&& this.cartas.getFirst().getValor().equals(ValorCarta.AS)) {
 			return true;
@@ -93,7 +93,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Retorna a diferença de index entre as cartas.
+	 * Retorna a diferenca de index entre as cartas.
 	 * 
 	 * @param cartaInicial
 	 * @param cartaFinal
@@ -107,7 +107,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há um Flush entre as 5 cartas.
+	 * Metodo que verifica se ha um Flush entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -126,7 +126,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há um Full House entre as 5 cartas.
+	 * Metodo que verifica se ha um Full House entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -137,7 +137,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há uma Quadra entre as 5 cartas.
+	 * Metodo que verifica se ha uma Quadra entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -150,7 +150,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que verifica se há um Straight Flush entre as 5 cartas.
+	 * Metodo que verifica se ha um Straight Flush entre as 5 cartas.
 	 * 
 	 * @return
 	 */
@@ -161,7 +161,7 @@ public class Baralho {
 	}
 	
 	/**
-	 * Método que retorna um Map com a quantidade de vezes que as cartas com
+	 * Metodo que retorna um Map com a quantidade de vezes que as cartas com
 	 * mesmo valor aparecem no baralho.
 	 * 
 	 * @return

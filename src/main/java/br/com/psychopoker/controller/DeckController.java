@@ -30,7 +30,7 @@ public class DeckController {
 	}
 
 	public String bestHand(){
-		String saida = "Mão: %s Monte: %s Melhor Jogo: %s";
+		String saida = "Mao: %s Monte: %s Melhor Jogo: %s";
 		return String.format(saida, this.stringDeck.substring(0, 14), this.stringDeck.substring(15, 29), this.hands.getLast().getValue());
 	}
 	private void calculateHands() {
