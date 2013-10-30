@@ -1,6 +1,7 @@
 package br.com.psychopoker;
 
 import br.com.psychopoker.controller.DeckController;
+import br.com.psychopoker.util.FileUtil;
 import junit.framework.TestCase;
 
 public class DeckControllerTest extends TestCase{
